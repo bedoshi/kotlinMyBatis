@@ -4,12 +4,3 @@ spring:
     username: root
     password: root
     driverClassName: com.mysql.cj.jdbc.Driver
-
-mybatis:
-  mapper-locations: classpath*:/mybatis/*.xml
-  type-aliases-package: com.example.demo.model
-  configuration:
-    map-underscore-to-camel-case: true
-    default-fetch-size: 100
-    default-statement-timeout: 30
-    cache-enabled: false
