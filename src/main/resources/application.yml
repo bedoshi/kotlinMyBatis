@@ -3,10 +3,10 @@ spring:
     url: jdbc:mysql://localhost:3306/sample
     username: root
     password: root
-    driverClassName: com.mysql.jdbc.Driver
+    driverClassName: com.mysql.cj.jdbc.Driver
 
 mybatis:
-  mapper-locations: classpath*:/mybatis/mapper/*.xml
+  mapper-locations: classpath*:/mybatis/*.xml
   type-aliases-package: com.example.demo.model
   configuration:
     map-underscore-to-camel-case: true
