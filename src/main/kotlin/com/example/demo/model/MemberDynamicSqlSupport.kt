@@ -20,5 +20,4 @@ object MemberDynamicSqlSupport {
         val name = column<String>(name = "name", jdbcType = JDBCType.VARCHAR)
         val corp = column<String>(name = "corp", jdbcType = JDBCType.VARCHAR)
     }
-
 }
