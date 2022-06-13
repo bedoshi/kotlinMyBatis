@@ -1,7 +1,7 @@
 package com.example.demo.mapper
 
 import com.example.demo.model.MemberDynamicSqlSupport
-import com.example.demo.model.MemberModel
+import com.example.demo.model.MemberRecord
 import org.apache.ibatis.annotations.*
 import org.apache.ibatis.type.JdbcType
 import org.mybatis.dynamic.sql.select.render.SelectStatementProvider
@@ -18,7 +18,7 @@ interface MemberMapper {
         Arg(column = "name", javaType = String::class, jdbcType = JdbcType.VARCHAR, id = true),
         Arg(column = "corp", javaType = String::class, jdbcType = JdbcType.VARCHAR, id = true)
     )
-    fun selectMany(selectStatement: SelectStatementProvider): List<MemberModel>
+    fun selectMany(selectStatement: SelectStatementProvider): List<MemberRecord>
 }
 
 fun MemberMapper.select(completer: SelectCompleter) =
